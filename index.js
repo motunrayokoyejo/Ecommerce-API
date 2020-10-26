@@ -3,11 +3,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
-const {User, Products, Categories} = require('./config/models')
-const productRoute = require('./routes')
+const {User, Products, Categories} = require('./src/config/models')
+const productRoute = require('./src/routes')
 const bcrypt = require('bcryptjs')
-require("./config/mongoose.js")(app);
-const authRoute = require('./auth/auth')
+require("./src/config/mongoose.js")(app);
+const authRoute = require('./src/auth/auth')
 
 app.use(morgan('dev'));
 app.use(cors());

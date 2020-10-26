@@ -1,7 +1,7 @@
 const express = require('express');
 const { token } = require('morgan');
 const productController = require('../controller');
-const imageInstance = require('../imageHandler')
+const imageInstance = require('./config/imageHandler')
 router = express.Router()
 
 function verifyToken(req, res, next) {
